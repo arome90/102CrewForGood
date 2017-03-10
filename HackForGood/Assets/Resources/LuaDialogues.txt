@@ -9,7 +9,6 @@ if c == "stage" then --Dialog #1
     stage.show(abuelo, "abuelohabla", "CustomRight", "CustomRight")
 
     --Dialog between escarlata and abuelo
-    -- If <intro>: next dialog
     conversation [[
     escarlata: Hola abuelo
     abuelo: Hola Escarlata. Frase larga para ver que pasa cuando llega al final del cuadro de texto y saber si sigue bien blebleble.
