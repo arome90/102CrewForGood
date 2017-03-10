@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 public class conversationLaunch : MonoBehaviour {
 
 	private bool characterIn;
 	public Text textoExplicativo;
 	public string conversation;
+	public Flowchart fc;
 	// Use this for initialization
 	void Start () {
 		this.textoExplicativo.enabled = false;
@@ -17,7 +19,7 @@ public class conversationLaunch : MonoBehaviour {
 	void Update () {
 		if (characterIn) {
 			if (Input.GetKeyDown ("a")) {
-				Debug.Log (conversation);
+				fc.ExecuteBlock (conversation);
 			}
 		}
 	}
