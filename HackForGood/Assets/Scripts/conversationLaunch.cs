@@ -5,25 +5,53 @@ using Fungus;
 public class conversationLaunch : MonoBehaviour {
 
 	private bool characterIn;
+    private moveGirl moveGirlScript;
+    private bool conversation1Active = true;
+    private bool conversation2Active = false;
+    private bool blockDialogue = false;
+
+    public GameObject girlPlayer;
 	public Text textoExplicativo;
 	public string conversation;
-	public Flowchart fc;
+    public string conversation2;
+    public Flowchart fc;
 	// Use this for initialization
 	void Start () {
 		this.textoExplicativo.enabled = false;
-	}
+        this.moveGirlScript = this.girlPlayer.GetComponent<moveGirl>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (characterIn) {
-			if (Input.GetKeyDown ("a") || Input.GetButtonDown("A Button")) {
-				//Debug.Log (this.conversation);
-				fc.ExecuteBlock (conversation);
-                this.textoExplicativo.enabled = false;
-			}
-		}
-	}
+        if (!this.blockDialogue) { 
+		    if (characterIn) {
+			    if (Input.GetKeyDown ("a") || Input.GetButtonDown("A Button")) {
+                    if (conversation1Active) {
+                        Debug.Log ("Primera conver lanzada");
+                        this.conversation1Active = false;
+                        this.conversation2Active = true;
+                        this.blockDialogue = true;
+                        this.textoExplicativo.enabled = false;
+                        this.moveGirlScript.setCanMove(false);
+				        fc.ExecuteBlock (conversation);
+                    }
+                }
+		    }
+        }
+    }
 
+    public void launchSecondConversation()
+    {
+           if (conversation2Active) { 
+            Debug.Log("Segunda conver lanzada");
+            this.conversation2Active = false;
+            this.blockDialogue = true;
+            this.textoExplicativo.enabled = false;
+            this.moveGirlScript.setCanMove(false);
+            fc.ExecuteBlock(conversation2);
+        }
+    }
 
 	void OnTriggerEnter2D(Collider2D col) {
         if (col.tag == "Girl")
@@ -40,4 +68,14 @@ public class conversationLaunch : MonoBehaviour {
             this.textoExplicativo.enabled = false;
         }
 	}
+
+    public bool getIsBlockedDialogue()
+    {
+        return this.blockDialogue;
+    }
+
+    public void setBlockDialogue(bool b)
+    {
+        this.blockDialogue = b;
+    }
 }

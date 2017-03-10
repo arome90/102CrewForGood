@@ -1483,6 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ebca033d8ebd14e8be4ccb3a0c8c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flujoConver: {fileID: 1793268347}
 --- !u!58 &1198766728
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1685,6 +1686,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1009805313092174, guid: 69a126d9e6e7b405594682e2b4270e10,
     type: 2}
   m_PrefabInternal: {fileID: 1633345433}
+--- !u!114 &1421073838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421073832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f484bc9b2b5b934393ba81c45f55536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1421073839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1819,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114913504732515920, guid: 8dadcb892c8ee7342be0bf74da27555a,
+        type: 2}
+      propertyPath: girlPlayer
+      value: 
+      objectReference: {fileID: 1421073832}
     - target: {fileID: 114913504732515920, guid: 8dadcb892c8ee7342be0bf74da27555a,
         type: 2}
       propertyPath: textoExplicativo
@@ -2275,6 +2292,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784868219}
+--- !u!1 &1793268347 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1221109641834290, guid: 8dadcb892c8ee7342be0bf74da27555a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1550827921}
 --- !u!1 &1912090997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,6 +2544,11 @@ GameObject:
   - component: {fileID: 2026408786}
   - component: {fileID: 2026408788}
   - component: {fileID: 2026408789}
+  - component: {fileID: 2026408791}
+  - component: {fileID: 2026408790}
+  - component: {fileID: 2026408794}
+  - component: {fileID: 2026408793}
+  - component: {fileID: 2026408792}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2568,6 +2595,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 2026408789}
+  - {fileID: 2026408790}
 --- !u!114 &2026408787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,7 +2612,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 178
+  blockViewHeight: 200
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -2593,9 +2621,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2026408786}
+  - {fileID: 2026408791}
   selectedCommands:
-  - {fileID: 2026408789}
+  - {fileID: 2026408792}
   variables:
   - {fileID: 2026408788}
   description: 
@@ -2641,6 +2669,106 @@ MonoBehaviour:
   runAsCoroutine: 1
   waitUntilFinished: 1
   returnVariable: {fileID: 0}
+--- !u!114 &2026408790
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  targetObject: {fileID: 1198766722}
+  methodName: activeBorrar
+  delay: 0
+--- !u!114 &2026408791
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 195
+    y: 167
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 2
+  blockName: Bloque2
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2026408794}
+  - {fileID: 2026408793}
+  - {fileID: 2026408792}
+--- !u!114 &2026408792
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  targetObject: {fileID: 1421073832}
+  methodName: animarTeleport
+  delay: 0
+--- !u!114 &2026408793
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  targetObject: {fileID: 1198766722}
+  methodName: activeAbsorber
+  delay: 0
+--- !u!114 &2026408794
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: llllllllllovgcfdserdfghcduruyg
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!1001 &2115900165
 Prefab:
   m_ObjectHideFlags: 0

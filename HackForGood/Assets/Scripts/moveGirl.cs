@@ -6,6 +6,7 @@ public class moveGirl : MonoBehaviour {
 
 	private Animator _animator;
 	private Rigidbody2D _rigidbody2d;
+    private bool canMove = true;
 
 	public float speed = 1f;
 
@@ -24,17 +25,19 @@ public class moveGirl : MonoBehaviour {
 
 	void CheckDirection()
 	{
-		if (Input.GetKey(KeyCode.LeftArrow) || (Input.GetAxis("DPADX") == -1))
-		{
-			WalkAnimation(-1, true);
+        if (this.canMove) { 
+		    if (Input.GetKey(KeyCode.LeftArrow) || (Input.GetAxis("DPADX") == -1))
+		    {
+			    WalkAnimation(-1, true);
 
-		}
-		else if (Input.GetKey(KeyCode.RightArrow) || (Input.GetAxis("DPADX") == 1))
-		{
-			WalkAnimation(1, true);
+		    }
+		    else if (Input.GetKey(KeyCode.RightArrow) || (Input.GetAxis("DPADX") == 1))
+		    {
+			    WalkAnimation(1, true);
 
-		}
-		/*else if (Input.GetKey(KeyCode.UpArrow) || (Input.GetAxis("DPADY") == -1))
+		    }
+        
+        /*else if (Input.GetKey(KeyCode.UpArrow) || (Input.GetAxis("DPADY") == -1))
 		{
 			WalkAnimation(0, 1, true);
 
@@ -43,11 +46,12 @@ public class moveGirl : MonoBehaviour {
 		{
 			WalkAnimation(0, -1, true);
 		}*/
-		else
-		{
-			_animator.SetBool("Moving", false);
-		}
-	}
+            else
+		    {
+			    _animator.SetBool("Moving", false);
+		    }
+        }
+    }
 
 	void FixedUpdate()
 	{
@@ -78,5 +82,15 @@ public class moveGirl : MonoBehaviour {
 		//_animator.SetFloat("VelY", y);
 		_animator.SetBool("Moving", moving);
 	}
+
+    public void setCanMove(bool b)
+    {
+        this.canMove = b;
+    }
+
+    public bool getCanMove()
+    {
+        return this.canMove;
+    }
 
 }

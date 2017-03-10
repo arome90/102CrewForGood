@@ -88,8 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e1c793d79ea324b85dbff4d1df38db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  girlPlayer: {fileID: 0}
   textoExplicativo: {fileID: 0}
   conversation: Bloque1
+  conversation2: Bloque2
   fc: {fileID: 0}
 --- !u!212 &212332005330401596
 SpriteRenderer:
