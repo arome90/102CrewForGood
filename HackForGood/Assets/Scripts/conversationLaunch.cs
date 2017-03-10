@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
@@ -18,21 +16,28 @@ public class conversationLaunch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (characterIn) {
-			if (Input.GetKeyDown ("a")) {
+			if (Input.GetKeyDown ("a") || Input.GetButtonDown("A Button")) {
 				//Debug.Log (this.conversation);
 				fc.ExecuteBlock (conversation);
+                this.textoExplicativo.enabled = false;
 			}
 		}
 	}
 
 
 	void OnTriggerEnter2D(Collider2D col) {
-		characterIn = true;
-		this.textoExplicativo.enabled = true;
-	}
+        if (col.tag == "Girl")
+        {
+            characterIn = true;
+            this.textoExplicativo.enabled = true;
+        }
+    }
 
 	void OnTriggerExit2D(Collider2D col) {
-		characterIn = false;
-		this.textoExplicativo.enabled = false;
+        if (col.tag == "Girl")
+        {
+            characterIn = false;
+            this.textoExplicativo.enabled = false;
+        }
 	}
 }
