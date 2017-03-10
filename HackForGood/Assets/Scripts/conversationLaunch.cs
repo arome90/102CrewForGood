@@ -19,7 +19,8 @@ public class conversationLaunch : MonoBehaviour {
 	void Update () {
 		if (characterIn) {
 			if (Input.GetKeyDown ("a")) {
-				fc.ExecuteBlock (conversation);
+				Debug.Log (this.conversation);
+				//fc.ExecuteBlock (conversation);
 			}
 		}
 	}
