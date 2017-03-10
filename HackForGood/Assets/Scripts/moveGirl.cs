@@ -7,15 +7,19 @@ public class moveGirl : MonoBehaviour {
 	private Animator _animator;
 	private Rigidbody2D _rigidbody2d;
     private bool canMove = true;
+    private SpriteRenderer spButtonA;
 
-	public float speed = 1f;
+    public float speed = 1f;
+    public GameObject AButton;
 
 	// Use this for initialization
 	void Start()
 	{
 		_animator = GetComponent<Animator>();
 		_rigidbody2d = GetComponent<Rigidbody2D>();
-	}
+        this.spButtonA = this.AButton.GetComponent<SpriteRenderer>();
+        this.activeButtonA(false);
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -93,4 +97,8 @@ public class moveGirl : MonoBehaviour {
         return this.canMove;
     }
 
+    public void activeButtonA(bool b)
+    {
+        this.spButtonA.enabled = b;
+    }
 }

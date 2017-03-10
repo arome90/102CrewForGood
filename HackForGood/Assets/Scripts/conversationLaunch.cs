@@ -11,15 +11,12 @@ public class conversationLaunch : MonoBehaviour {
     private bool blockDialogue = false;
 
     public GameObject girlPlayer;
-	public Text textoExplicativo;
 	public string conversation;
     public string conversation2;
     public Flowchart fc;
 	// Use this for initialization
 	void Start () {
-		this.textoExplicativo.enabled = false;
         this.moveGirlScript = this.girlPlayer.GetComponent<moveGirl>();
-
     }
 	
 	// Update is called once per frame
@@ -32,7 +29,7 @@ public class conversationLaunch : MonoBehaviour {
                         this.conversation1Active = false;
                         this.conversation2Active = true;
                         this.blockDialogue = true;
-                        this.textoExplicativo.enabled = false;
+                        this.moveGirlScript.activeButtonA(false);
                         this.moveGirlScript.setCanMove(false);
 				        fc.ExecuteBlock (conversation);
                     }
@@ -47,7 +44,7 @@ public class conversationLaunch : MonoBehaviour {
             Debug.Log("Segunda conver lanzada");
             this.conversation2Active = false;
             this.blockDialogue = true;
-            this.textoExplicativo.enabled = false;
+            this.moveGirlScript.activeButtonA(false);
             this.moveGirlScript.setCanMove(false);
             fc.ExecuteBlock(conversation2);
         }
@@ -57,7 +54,7 @@ public class conversationLaunch : MonoBehaviour {
         if (col.tag == "Girl")
         {
             characterIn = true;
-            this.textoExplicativo.enabled = true;
+            this.moveGirlScript.activeButtonA(true);
         }
     }
 
@@ -65,7 +62,7 @@ public class conversationLaunch : MonoBehaviour {
         if (col.tag == "Girl")
         {
             characterIn = false;
-            this.textoExplicativo.enabled = false;
+            this.moveGirlScript.activeButtonA(false);
         }
 	}
 

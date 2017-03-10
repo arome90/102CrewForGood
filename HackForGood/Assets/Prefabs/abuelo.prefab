@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   girlPlayer: {fileID: 0}
-  textoExplicativo: {fileID: 0}
   conversation: Bloque1
   conversation2: Bloque2
   fc: {fileID: 0}
