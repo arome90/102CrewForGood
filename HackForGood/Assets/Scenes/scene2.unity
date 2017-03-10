@@ -297,10 +297,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: -18.951273, y: -3.5609188}
-  - {x: -18.934206, y: -3.012629}
-  - {x: -17.209677, y: -1.8081468}
-  - {x: -14.504463, y: -1.7506669}
-  - {x: -14.568049, y: -1.0625134}
+  - {x: -13.268244, y: -3.610211}
+  - {x: -13.336462, y: -1.8302794}
+  - {x: -13.331432, y: -1.6400033}
+  - {x: -13.350753, y: -1.0846461}
   - {x: -11.340711, y: -1.0655038}
   - {x: -11.106244, y: -1.0556579}
   - {x: -11.087965, y: -1.8800769}
@@ -311,8 +311,8 @@ EdgeCollider2D:
   - {x: -1.862949, y: -1.5141698}
   - {x: 1.5245128, y: -1.4934027}
   - {x: 1.5139256, y: -1.2036022}
-  - {x: 12.397137, y: -1.1620762}
-  - {x: 19.142893, y: -1.1576046}
+  - {x: 13.149647, y: -1.1178111}
+  - {x: 13.234935, y: -3.567388}
 --- !u!1 &107757785
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3c92a9c15886a4158be199e0fd240e1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 716091834}
   - component: {fileID: 716091833}
   - component: {fileID: 716091838}
+  - component: {fileID: 716091839}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -648,7 +649,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.662878
+  orthographic size: 3.6023088
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -669,7 +670,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716091832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.08, y: 0, z: -10}
+  m_LocalPosition: {x: -13.16, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -681,12 +682,29 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716091832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 081c23e6b5ec1834b8c1fe449fa14347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   personaje: {fileID: 2142084878}
+--- !u!114 &716091839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716091832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39a9f9731ef448c1996341ebde10878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2142084878}
+  damping: 0
+  lookAheadFactor: 0
+  lookAheadReturnSpeed: 0
+  lookAheadMoveThreshold: 0
+  yPosRestriction: 0
 --- !u!1 &1027996981
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +815,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fc25b884904774c29a36007a88d3cc73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -824,11 +842,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4642038592486882, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.33
+      value: -12.32
       objectReference: {fileID: 0}
     - target: {fileID: 4642038592486882, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.15
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 4642038592486882, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
       propertyPath: m_LocalPosition.z
@@ -872,6 +890,15 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290021625567788, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114640043696378328, guid: e2041e9f419194824b9bcd863fa2b157,
+        type: 2}
+      propertyPath: speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 60907668448972794, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
@@ -923,7 +950,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5013ef90c4235465fad0414a996cb687, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
