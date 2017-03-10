@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: cf82a54702a0f41a3947381448f62366
-timeCreated: 1489155088
+guid: c1a4150dde765453dbad6c8366a625a2
+timeCreated: 1489160361
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -97,10 +97,10 @@ TextureImporter:
       name: chicanormal_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 102
-        width: 43
-        height: 94
+        x: 68
+        y: 309
+        width: 108
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,10 +110,10 @@ TextureImporter:
       name: chicanormal_1
       rect:
         serializedVersion: 2
-        x: 59
-        y: 102
-        width: 43
-        height: 94
+        x: 189
+        y: 309
+        width: 108
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,10 +123,10 @@ TextureImporter:
       name: chicanormal_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 102
-        width: 53
-        height: 94
+        x: 310
+        y: 309
+        width: 133
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,10 +136,10 @@ TextureImporter:
       name: chicanormal_3
       rect:
         serializedVersion: 2
-        x: 162
-        y: 102
-        width: 49
-        height: 94
+        x: 448
+        y: 309
+        width: 123
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: chicanormal_4
       rect:
         serializedVersion: 2
-        x: 218
-        y: 102
-        width: 43
-        height: 95
+        x: 589
+        y: 309
+        width: 108
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: chicanormal_5
       rect:
         serializedVersion: 2
-        x: 266
-        y: 102
-        width: 53
-        height: 93
+        x: 710
+        y: 309
+        width: 133
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: chicanormal_6
       rect:
         serializedVersion: 2
-        x: 321
-        y: 102
-        width: 49
-        height: 94
+        x: 848
+        y: 309
+        width: 123
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: chicanormal_7
       rect:
         serializedVersion: 2
-        x: 377
-        y: 102
-        width: 43
-        height: 95
+        x: 989
+        y: 309
+        width: 109
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: chicanormal_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 43
-        height: 95
+        x: 40
+        y: 52
+        width: 109
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: chicanormal_9
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 49
-        height: 94
+        x: 166
+        y: 52
+        width: 123
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: chicanormal_10
       rect:
         serializedVersion: 2
-        x: 101
-        y: 0
-        width: 53
-        height: 93
+        x: 295
+        y: 52
+        width: 133
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: chicanormal_11
       rect:
         serializedVersion: 2
-        x: 159
-        y: 0
-        width: 43
-        height: 95
+        x: 440
+        y: 52
+        width: 109
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: chicanormal_12
       rect:
         serializedVersion: 2
-        x: 209
-        y: 0
-        width: 49
-        height: 94
+        x: 566
+        y: 52
+        width: 124
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: chicanormal_13
       rect:
         serializedVersion: 2
-        x: 260
-        y: 0
-        width: 53
-        height: 94
+        x: 695
+        y: 52
+        width: 133
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: chicanormal_14
       rect:
         serializedVersion: 2
-        x: 318
-        y: 0
-        width: 43
-        height: 94
+        x: 840
+        y: 52
+        width: 109
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +292,10 @@ TextureImporter:
       name: chicanormal_15
       rect:
         serializedVersion: 2
-        x: 366
-        y: 0
-        width: 43
-        height: 94
+        x: 961
+        y: 52
+        width: 108
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
