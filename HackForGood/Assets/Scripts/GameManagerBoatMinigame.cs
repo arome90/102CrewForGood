@@ -20,6 +20,15 @@ public class GameManagerBoatMinigame : MonoBehaviour
         this.movePlayerScript3 = this.boatPlayer3.GetComponent<moveBoat>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetButtonDown("Back Button")))
+        {
+            Debug.Log("Saliendo...");
+            Application.Quit();
+        }
+    }
+
 
     public void setCanMove()
     {
