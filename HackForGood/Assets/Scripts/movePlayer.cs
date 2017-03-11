@@ -4,10 +4,10 @@ using System.Collections;
 public class movePlayer : MonoBehaviour {
     private Animator _animator;
     private Rigidbody2D _rigidbody2d;
-     private bool canMove = true;
+    private bool canMove = true;
     private SpriteRenderer spButtonA;
-    public GameObject AButton;
 
+    public GameObject AButton;
     public float speed = 1f;
 
     // Use this for initialization
@@ -16,15 +16,13 @@ public class movePlayer : MonoBehaviour {
         _animator = GetComponent<Animator>();
         _rigidbody2d = GetComponent<Rigidbody2D>();
         this.spButtonA = this.AButton.GetComponent<SpriteRenderer>();
-        this.activeButtonA(false);
+        this.desactiveButtonA();
     }
 
     // Update is called once per frame
     void Update()
     {
-         if (this.canMove) {
-            CheckDirection();
-         }
+        CheckDirection();
     }
 
     void CheckDirection()
@@ -84,29 +82,14 @@ public class movePlayer : MonoBehaviour {
         _animator.SetBool("Moving", moving);
     }
 
-	/*void Update ()
-	{
-		if (Input.GetKey(KeyCode.LeftArrow) || (Input.GetAxis("DPADX") == -1))
-		{
-			transform.position += Vector3.left * speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.RightArrow) || (Input.GetAxis("DPADX") == 1))
-        {
-			transform.position += Vector3.right * speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.UpArrow) || (Input.GetAxis("DPADY") == -1))
-        {
-			transform.position += Vector3.up * speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.DownArrow) || (Input.GetAxis("DPADY") == 1))
-        {
-			transform.position += Vector3.down * speed * Time.deltaTime;
-		}
-	}*/
-
-    public void setCanMove(bool b)
+    public void setCanMove()
     {
-        this.canMove = b;
+        this.canMove = true;
+    }
+
+    public void setCanNotMove()
+    {
+        this.canMove = false;
     }
 
     public bool getCanMove()
@@ -114,8 +97,13 @@ public class movePlayer : MonoBehaviour {
         return this.canMove;
     }
 
-    public void activeButtonA(bool b)
+    public void activeButtonA()
     {
-        this.spButtonA.enabled = b;
+        this.spButtonA.enabled = true;
+    }
+
+    public void desactiveButtonA()
+    {
+        this.spButtonA.enabled = false;
     }
 }
