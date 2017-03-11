@@ -22,7 +22,8 @@ public class movePlayer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        CheckDirection();
+        if (canMove)
+            CheckDirection();
     }
 
     void CheckDirection()
