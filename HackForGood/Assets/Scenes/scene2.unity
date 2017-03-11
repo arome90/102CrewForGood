@@ -296,8 +296,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -18.951273, y: -3.5609188}
-  - {x: -13.268244, y: -3.610211}
+  - {x: -19.063147, y: -3.2252977}
+  - {x: -17.239761, y: -1.8481995}
   - {x: -13.336462, y: -1.8302794}
   - {x: -13.331432, y: -1.6400033}
   - {x: -13.350753, y: -1.0846461}
@@ -312,7 +312,7 @@ EdgeCollider2D:
   - {x: 1.5245128, y: -1.4934027}
   - {x: 1.5139256, y: -1.2036022}
   - {x: 13.149647, y: -1.1178111}
-  - {x: 13.234935, y: -3.567388}
+  - {x: 18.940495, y: -1.0502286}
 --- !u!1 &92083789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,6 +1659,7 @@ GameObject:
   - component: {fileID: 716091833}
   - component: {fileID: 716091838}
   - component: {fileID: 716091839}
+  - component: {fileID: 716091840}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1752,7 +1753,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716091832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a39a9f9731ef448c1996341ebde10878, type: 3}
   m_Name: 
@@ -1763,6 +1764,20 @@ MonoBehaviour:
   lookAheadReturnSpeed: 0
   lookAheadMoveThreshold: 0
   yPosRestriction: 0
+--- !u!114 &716091840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716091832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335ae0dcdbd5c48a0bed001e768ac879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  separacion: 0
+  limiteIzquierdo: -13.2
+  limiteDerecho: 13
 --- !u!1 &811478542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,7 +2761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1290021625567788, guid: e2041e9f419194824b9bcd863fa2b157, type: 2}
       propertyPath: m_TagString
-      value: Player
+      value: Girl
       objectReference: {fileID: 0}
     - target: {fileID: 114640043696378328, guid: e2041e9f419194824b9bcd863fa2b157,
         type: 2}
