@@ -3403,6 +3403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032143485}
   - component: {fileID: 2032143486}
+  - component: {fileID: 2032143487}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3435,6 +3436,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   girlPlayer: {fileID: 2142084872}
+--- !u!114 &2032143487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032143484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b50ca911f91e7d4f9c0e0dda385ac9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: scene3
 --- !u!1 &2047272425
 GameObject:
   m_ObjectHideFlags: 0
