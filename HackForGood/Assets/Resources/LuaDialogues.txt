@@ -19,7 +19,8 @@ if c == "stage" then --Dialog #1
     escarlata: No te preocupes abuelo, yo te ayudaré.
     abuelo: Pues métete en el libro y podrás ayudarme.
     abuelo: A recordar todo aquello que una vez sucedió.
-    escarlata: ¡Nos vemos pronto!
+    escarlata: ¿Meterme en el libro?
+    escarlata: ¡ooooh!
     ]]
 
     -- Hide Escarlata, moving to de left edge
