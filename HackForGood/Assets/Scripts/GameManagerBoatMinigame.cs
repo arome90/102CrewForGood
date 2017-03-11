@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManagerBoatMinigame : MonoBehaviour
@@ -42,6 +43,14 @@ public class GameManagerBoatMinigame : MonoBehaviour
         this.movePlayerScript.setCanNotMove();
         this.movePlayerScript2.setCanMove();
         this.movePlayerScript3.setCanMove();
+    }
+
+    public void loadSceneIndias(){
+        SceneManager.LoadScene("scene5");
+    }
+
+    public void loadScenePerdido(){
+        SceneManager.LoadScene("BoatMinigame");
     }
 }
 
