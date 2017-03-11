@@ -19,5 +19,26 @@ if c == "stage" then --Dialog #1
     stage.hide(escarlata, "CustomLeft")
 
     -- Hide abuelo, moving to de right edge
-    stage.hide(abuelo, "CustomRight")
+    stage.hide(colon, "CustomRight")
+end
+
+if c == "stage2" then --Dialog #1
+    -- Show escarlata's portrait, appearing on the left
+    stage.show(escarlata, "chicahablaves", "CustomLeft", "CustomLeft")
+
+    -- Show colon's portrait, appearing on the right
+    stage.show(colon, "colonhabla", "CustomRight", "CustomRight")
+
+    --Dialog between escarlata and abuelo
+    conversation [[
+    escarlata: Hola Colon
+    colon: Hola Escarlata.
+    colon: Comeme un pie
+    ]]
+
+    -- Hide Escarlata, moving to de left edge
+    stage.hide(escarlata, "CustomLeft")
+
+    -- Hide abuelo, moving to de right edge
+    stage.hide(colon, "CustomRight")
 end

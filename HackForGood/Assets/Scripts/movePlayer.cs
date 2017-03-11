@@ -4,6 +4,9 @@ using System.Collections;
 public class movePlayer : MonoBehaviour {
     private Animator _animator;
     private Rigidbody2D _rigidbody2d;
+     private bool canMove = true;
+    private SpriteRenderer spButtonA;
+    public GameObject AButton;
 
     public float speed = 1f;
 
@@ -12,12 +15,16 @@ public class movePlayer : MonoBehaviour {
     {
         _animator = GetComponent<Animator>();
         _rigidbody2d = GetComponent<Rigidbody2D>();
+        this.spButtonA = this.AButton.GetComponent<SpriteRenderer>();
+        this.activeButtonA(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckDirection();
+         if (this.canMove) {
+            CheckDirection();
+         }
     }
 
     void CheckDirection()
@@ -96,4 +103,19 @@ public class movePlayer : MonoBehaviour {
 			transform.position += Vector3.down * speed * Time.deltaTime;
 		}
 	}*/
+
+    public void setCanMove(bool b)
+    {
+        this.canMove = b;
+    }
+
+    public bool getCanMove()
+    {
+        return this.canMove;
+    }
+
+    public void activeButtonA(bool b)
+    {
+        this.spButtonA.enabled = b;
+    }
 }
