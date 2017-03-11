@@ -10,6 +10,9 @@ public class MarcoGestion : MonoBehaviour {
     private Animator ciudadAnim;
     private AudioSource aud;
 
+    private bool sonidoCiudad = false;
+    private bool sonidoAnio = false;
+
     void Start()
     {
         this.anioAnim = this.anio.GetComponent<Animator>();
@@ -19,13 +22,19 @@ public class MarcoGestion : MonoBehaviour {
 
     public void ActivarAnio()
     {
-        this.playEffect();
+        if (!sonidoAnio)
+            this.playEffect();
+
+        sonidoAnio = true;
         this.anioAnim.SetBool("Aparecer", true);
     }
 
     public void ActivarCiudad()
     {
-        this.playEffect();
+        if (!sonidoCiudad)
+            this.playEffect();
+
+        sonidoCiudad = true;
         this.ciudadAnim.SetBool("Aparecer", true);
     }
 
