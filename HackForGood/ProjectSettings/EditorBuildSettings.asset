@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/scene2.unity
   - enabled: 1
     path: Assets/Scenes/scene3.unity
+  - enabled: 1
+    path: Assets/Scenes/BoatMinigame.unity
