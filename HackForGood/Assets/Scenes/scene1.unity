@@ -2795,6 +2795,7 @@ GameObject:
   - component: {fileID: 2026408798}
   - component: {fileID: 2026408797}
   - component: {fileID: 2026408793}
+  - component: {fileID: 2026408800}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2870,7 +2871,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2026408792}
   selectedCommands:
-  - {fileID: 2026408793}
+  - {fileID: 2026408800}
   variables:
   - {fileID: 2026408788}
   description: 
@@ -2977,6 +2978,7 @@ MonoBehaviour:
   - {fileID: 2026408798}
   - {fileID: 2026408797}
   - {fileID: 2026408793}
+  - {fileID: 2026408800}
 --- !u!114 &2026408793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3104,6 +3106,22 @@ MonoBehaviour:
   targetObject: {fileID: 1198766722}
   methodName: activeAbsorber
   delay: 0
+--- !u!114 &2026408800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026408784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  targetObject: {fileID: 872027072}
+  methodName: loadScene
+  delay: 3
 --- !u!1 &2141674035
 GameObject:
   m_ObjectHideFlags: 0
