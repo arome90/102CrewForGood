@@ -24,7 +24,10 @@ public class moveGirl : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		CheckDirection();
+        if (this.canMove)
+        {
+            CheckDirection();
+        }
 	}
 
 	void CheckDirection()
@@ -59,8 +62,10 @@ public class moveGirl : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		Move();
-
+        if (this.canMove)
+        {
+            Move();
+        }
 	}
 
 	void Move()
@@ -90,6 +95,11 @@ public class moveGirl : MonoBehaviour {
     public void setCanMove(bool b)
     {
         this.canMove = b;
+        if (!b)
+        {
+            _rigidbody2d.velocity = Vector2.zero;
+            _animator.SetBool("Moving", false);
+        }
     }
 
     public bool getCanMove()
